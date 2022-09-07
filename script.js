@@ -44,7 +44,7 @@ function clear() {
 
 //Preenche as informações na tela
 function showInfos(json) {
-    document.querySelector('.titulo').innerHTML = json.name;
+    document.querySelector('.titulo').innerHTML = `${json.name} - ${json.sys.country}`;
     document.querySelector('.tempInfo').innerHTML = `${json.main.temp}<sup> ºC</sup>`;
     document.querySelector('.ventoInfo').innerHTML = `${json.wind.speed}<span> km/h</span>`;
     document.querySelector('.temp img').setAttribute('src', `http://openweathermap.org/img/wn/${json.weather[0].icon}@2x.png`)
